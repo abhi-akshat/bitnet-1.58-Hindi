@@ -25,11 +25,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Upgrade pip
 RUN python3 -m pip install --upgrade pip
 
-# Install Python libraries
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Set the working directory
-WORKDIR /
+WORKDIR /workspace
+
+# Copy the requirements.txt file into the container
+COPY . /workspace/
+
+# Install Python libraries from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Ensure NVIDIA runtime is available
 LABEL com.nvidia.volumes.needed="nvidia_driver"

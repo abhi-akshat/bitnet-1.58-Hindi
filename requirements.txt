@@ -1,4 +1,4 @@
-pytorch==2.5.1+cu121
+pytorch==2.5.1
 tranformers==4.46.2
 huggingface_hub==0.26.2
 datasets==3.1.0

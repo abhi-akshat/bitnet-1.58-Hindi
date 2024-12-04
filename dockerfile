@@ -1,5 +1,5 @@
 # Use NVIDIA CUDA base image compatible with H100 and Ubuntu 22.04
-FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
+FROM nvidia/cuda:12.4.0-devel-ubuntu22.04
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -36,7 +36,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Ensure NVIDIA runtime is available
 LABEL com.nvidia.volumes.needed="nvidia_driver"
-LABEL com.nvidia.cuda.version="12.2"
+LABEL com.nvidia.cuda.version="12.4"
 
 # Expose default ports (if running Jupyter or other services)
 EXPOSE 8888

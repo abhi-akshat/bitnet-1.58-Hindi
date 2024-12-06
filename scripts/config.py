@@ -56,4 +56,20 @@ class Config:
         "NEW_MODEL" : "Bitnet-Airavata-100M"
     }
     
+    def getConfig(self, param):
+        if param == "100m":
+            return self.config_100m
+        elif param == "160m":
+            return self.config_160m
+        elif param == "400m":
+            return self.config_400m
+        elif param == "1b":
+            return self.config_1b
+        elif param == "3b":
+            return self.config_3b
+        elif param == "7b":
+            return self.config_7b
+        else:
+            return self.config_100m
+    
 config  = Config()

@@ -1,4 +1,4 @@
-import pytroch as torch
+import torch
 import transformers
 import huggingface_hub
 import wandb
